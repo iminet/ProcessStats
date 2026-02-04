@@ -1,6 +1,6 @@
 # ProcessStats
 
-PowerShell module to analyze **duplicate processes** on your system:
+PowerShell module to analyze **aggregated processes** on your system:
 - Memory usage (`Get-ProcessMemory`)  
 - CPU usage (`Get-ProcessCPU`)
 
@@ -28,7 +28,7 @@ PowerShell module to analyze **duplicate processes** on your system:
 
 2. Import the module:
 
-    `Import-Module "C:\WhereverYouCloned\ProcessStats\ProcessStats.psm1" -Force`
+    `Import-Module "C:\WhereverYouCloned\ProcessStats\src\ProcessStats.psm1" -Force`
 
 3. Verify:
 
@@ -64,10 +64,10 @@ Count Name     Memory Sum in MB
 ### CPU Usage
 ```powershell
 # Show all processes with 2+ instances
-Get-DuplicateProcessCPU
+Get-ProcessCPU
 
 # Show processes with 3+ instances
-Get-DuplicateProcessCPU -MinCount 3
+Get-ProcessCPU -MinCount 3
 ```
 
 Example output:
